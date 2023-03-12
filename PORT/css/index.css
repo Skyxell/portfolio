@@ -1,0 +1,275 @@
+.nom {
+    user-select: none;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    margin: 0;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 150px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    font-family: 'Passion One', cursive;
+    animation: slide 2s forwards;
+    -webkit-animation: slide 2s 5s forwards;
+}
+
+.rond {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.projecteur1 {
+    height: 400px;
+    width: 400px;
+    animation: rightslidein 2s ease;
+    -webkit-animation: rightslidein 2s ease;
+}
+
+.projecteur2 {
+    height: 300px;
+    width: 300px;
+    animation: bottomslidein 3.5s ease;
+    -webkit-animation: bottomslidein 3.5s ease;
+}
+
+.projecteur3 {
+    height: 350px;
+    width: 350px;
+    animation: topslidein 1.5s ease;
+    -webkit-animation: topslidein 1.5s ease;
+}
+
+.projecteur4 {
+    height: 450px;
+    width: 450px;
+    animation: leftslidein 3s ease;
+    -webkit-animation: leftslidein 3s ease;
+}
+
+.projecteur5 {
+    background-color: white;
+    height: 450px;
+    border-radius: 450px;
+    -webkit-border-radius: 450px;
+    -moz-border-radius: 450px;
+    -ms-border-radius: 450px;
+    -o-border-radius: 450px;
+    animation: largecircle 3s 2.5s forwards;
+    -webkit-animation: largecircle 3s 2.5s forwards;
+}
+
+.contour {
+    border-radius: 450px;
+    -webkit-border-radius: 450px;
+    -moz-border-radius: 450px;
+    -ms-border-radius: 450px;
+    -o-border-radius: 450px;
+    background-color: transparent;
+    animation: border 1s 5s forwards;
+    -webkit-animation: border 1s 5s forwards;
+}
+
+.contour::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    border-radius: 450px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 450px;
+    -moz-border-radius: 450px;
+    -ms-border-radius: 450px;
+    -o-border-radius: 450px;
+    animation: bump 1s 5s forwards;
+    -webkit-animation: bump 1s 5s forwards;
+}
+
+
+.boutton {
+    opacity: 0;
+    background-color: black;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    font-size: 20px;
+    color: black;
+    position: fixed;
+    border: solid black 4px;
+    padding: 15px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    animation: buttonslide 2s 5s forwards;
+    -webkit-animation: buttonslide 2s 5s forwards;
+}
+
+.boutton:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+    -moz-transform: translate(-50%, -50%) scale(1.1);
+    -ms-transform: translate(-50%, -50%) scale(1.1);
+    -o-transform: translate(-50%, -50%) scale(1.1);
+    padding: 15px 50px;
+    color: white;
+}
+
+
+
+
+
+@keyframes slide {
+    from {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    to {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes buttonslide {
+    from {
+        opacity: 0;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    to {
+        opacity: 1;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes bump {
+    0% {
+        border: 1px solid white;
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rightslidein {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes leftslidein {
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes topslidein {
+    from {
+        margin-top: -100%;
+        margin-left: -100%;
+    }
+
+    to {
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+}
+
+@keyframes bottomslidein {
+    from {
+        margin-top: 100%;
+        margin-left: 45%;
+    }
+
+    to {
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+}
+
+@keyframes largecircle {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 650px;
+    }
+}
+
+@keyframes border {
+    from {
+        height: 600px;
+        width: 800px;
+        border: transparent black 10px;
+    }
+
+    to {
+        height: 400px;
+        width: 600px;
+        border: solid black 10px;
+    }
+}
